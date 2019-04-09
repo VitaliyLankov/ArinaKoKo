@@ -5,10 +5,8 @@ print(len(list1))
 w = len(list1)
 
 for a in range(w):
-	for b in range(0,w-a-1):
+	for b in range(w-1):
 		if list1[b] > list1[b+1]:
 			list1[b],list1[b+1] = list1[b+1],list1[b]	
 	print(list1)
-	
-	
 	
