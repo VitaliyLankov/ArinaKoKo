@@ -1,0 +1,20 @@
+list1 = [5,1,4,2,8]
+print(list1)
+
+print(len(list1))
+b = 0
+c = 0
+for a in list1:
+	if b + 1 < len(list1):
+		if list1[b] > list1[b+1]:
+			list1[b],list1[b+1] = list1[b+1],list1[b]
+		print(list1)
+		b = b + 1
+	else:
+		print('second faze')
+		for a in list1:
+			if c + 1 < len(list1):
+				if list1[c] > list1[c+1]:
+					list1[c],list1[c+1] = list1[c+1],list1[c]
+			print(list1)
+			c = c + 1
