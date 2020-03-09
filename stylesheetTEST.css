@@ -222,9 +222,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
 @keyframes scroll {
   from {background-position: 0vw;}
   20% {background-position: 0vw;}
-  33% {background-position: 100vw;}
-  53% {background-position: 100vw;}
-  66% {background-position: 200vw;}
-  86% {background-position: 200vw;}
-  to {background-position: 300vw;}
+  33% {background-position: -100vw;}
+  53% {background-position: -100vw;}
+  66% {background-position: -200vw;}
+  86% {background-position: -200vw;}
+  to {background-position: -300vw;}
 }
