@@ -1,0 +1,240 @@
+/*html {
+  box-sizing: border-box;
+  width: 100vw;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+*/
+
+html {
+  background-color: #000;
+}
+
+main {
+  background-color: #000;
+  width: 100%;    
+}
+
+.mainWrapper {
+  width: 100%;  
+  height: 100vh;
+  display: grid;  
+  grid-template-rows: repeat(4, 1fr) 23fr;
+  grid-template-columns: 1fr 26fr 1fr 1fr;  
+  grid-template-areas: 
+  '. . . .'
+  '. name logo .'
+  '. nav logo .'
+  '. . . .'
+  'content content content content';  
+}
+
+.aboutWrapper {
+  width: 100%;  
+  height: 100vh;
+  display: grid;  
+  grid-template-rows: repeat(4, 1fr) 23fr;
+  grid-template-columns: 1fr 26fr 1fr 1fr;  
+  grid-template-areas: 
+  '. . . .'
+  '. name logo .'
+  '. nav logo .'
+  '. . . .'
+  '. about about .';  
+}
+
+#name {  
+  /*border: 1px purple solid;*/
+  font-size: 2.5vw;
+  color: #fefcd5;  
+  font-family: 'blackset';
+  grid-area: name;    
+	padding-left: 20px;
+	cursor: pointer;
+}
+
+#logo {
+  color: #fefcd5;
+  grid-area: logo;
+  background-image: url(img/logoLowRes.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat; 
+  cursor: pointer;   
+}
+
+nav {    
+  grid-area: nav;      
+  font-family: 'HelveticfLTS';
+  font-size: 1.4vw;	
+}
+
+ul {
+  color: #fefcd5;
+  height: 100%;
+  display: grid;  
+  grid-template-columns: subgrid;  
+  grid-template-rows: subgrid;  
+  grid-auto-flow: column;      
+  justify-content: space-around;
+  align-content: flex-end;  
+  align-items: baseline;  	
+}
+
+li {
+  cursor: pointer;
+}
+
+#instagramHREF {
+  font-family: 'HelveticfLTS';
+  font-size: 1.4vw;	
+  text-decoration: none;
+}
+
+header {    
+  grid-area: content;  
+  overflow: hidden;
+  background: url(img/homepageHeadHorizontalScroll2.jpg) center repeat-x;
+  background-position: 0vw center;
+  background-size: 300vw; 
+  animation: scroll 20s linear infinite;
+}
+
+#about {  
+  color: #fefcd5;
+  grid-area: about;
+  display: none;  
+  grid-template-columns: 27% 46% 27%;
+  grid-template-rows: subgrid;    
+}
+
+#photoAndGreeting { 
+  grid-row: 1;
+  grid-column: 2;  
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-template-rows: 42% 15% 4% 39%; 
+  justify-items: center;
+  align-items: center;
+  text-align: center; 
+}
+
+#myPhoto {
+  height: 28vh;
+  display: block;
+  grid-row: 1;    
+}
+
+h2 {
+  font-size: 8.2vw;  
+  font-family: 'blackset';  
+  white-space: nowrap;
+  color: #fefcd5;
+}
+#heyThere {    
+  grid-row: 2;  
+  align-self: flex-end;
+}
+
+.aboutMe {
+  grid-row: 4;
+  align-self: flex-start; 
+  font-family: 'HelveticfLTS-Th'; 
+  font-size: 1vw;
+  line-height: normal;  
+  color: #fefcd5;
+  letter-spacing: 0.04em;
+}
+
+#contacts {
+  height: 100vh;
+  width: 100%;
+  display: none;
+  grid-template-columns: 30% 40% 30%;
+  grid-template-rows: 30% 3% 15% 6% 23% 23%;
+  grid-template-areas:
+  '. contactH .'
+  '. . .'
+  '. contactP .'
+  '. hrefs .'
+  '. . .'
+  'gradient gradient gradient';
+  text-align: center;
+}
+
+#contacts>h2 {
+  align-self: end;
+  grid-area: contactH;
+}
+
+#contacts>p {
+  grid-area: contactP;
+  font-size: 1.15vw;
+}
+
+#hrefs {
+  grid-area: hrefs;
+  display: flex;  
+  justify-content: space-evenly; 
+  align-items: center;
+}
+
+a {
+  font-family: 'HelveticaLTStd-Bold';
+  font-size: 1.1vw;
+  color: #fefcd5;
+}
+
+#gradient {
+  grid-area: gradient;
+  background: #000000;
+background: -moz-linear-gradient(top, #000000 0%, #050505 28%, #171717 54%, #3b3b3b 77%, #616161 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, #000000), color-stop(28%, #050505), color-stop(54%, #171717), color-stop(77%, #3b3b3b), color-stop(100%, #616161));
+background: -webkit-linear-gradient(top, #000000 0%, #050505 28%, #171717 54%, #3b3b3b 77%, #616161 100%);
+background: -o-linear-gradient(top, #000000 0%, #050505 28%, #171717 54%, #3b3b3b 77%, #616161 100%);
+background: -ms-linear-gradient(top, #000000 0%, #050505 28%, #171717 54%, #3b3b3b 77%, #616161 100%);
+background: linear-gradient(to bottom, #000000 0%, #050505 28%, #171717 54%, #3b3b3b 77%, #616161 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#616161', GradientType=0 );}
+
+#works {    
+  width: 100%;    
+  display: flex;
+  justify-content: space-evenly;  
+}
+
+.columnsWorks {
+  width: 30%;  
+}
+
+.thumbnail {
+  width: 100%;  
+  margin-top: 7%;  
+  position: relative;
+  top: 10%;    
+  opacity: 0;
+}
+
+.animated {
+  transition: top 1s, opacity 2s;
+  top: 0;    
+  opacity: 1;
+}
+
+.mail {
+  font-family: 'HelveticaLTStd-Bold';
+  font-size: 1.1vw;
+  text-decoration: underline;
+  color: #fefcd5;
+}
+
+@keyframes scroll {
+  from {background-position: 0vw;}
+  20% {background-position: 0vw;}
+  33% {background-position: 100vw;}
+  53% {background-position: 100vw;}
+  66% {background-position: 200vw;}
+  86% {background-position: 200vw;}
+  to {background-position: 300vw;}
+}
